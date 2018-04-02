@@ -10,13 +10,21 @@
 
 [tilted\_drink.unitypackage](https://github.com/phi16/VRC_storage/raw/master/tilted_drink.unitypackage)
 
-傾くと水面を保つ円錐台
+傾くと水面を保つ円柱
 
 UpperRadius と LowerRadius が指定できるので円錐台形なら作れます
 
 ### 使い方
 
 import すると `tilted_drink` フォルダに諸々が追加されます
+
+単純には `tilted_drink` prefab を出して器にいれて、適当に色を弄れば動きます
+
+- 器に完全に注ぎきった状態における上面を円柱の上面に合わせてください
+  - 飲料の量は Material の `Level` で調整してください
+- UpperRadius/LowerRadius で円錐台形になら変形できます
+
+詳細
 
 - `cylinder.fbx`: デフォルトでとりあえず入れといた円柱
   - これに Shader を合わせているので基本的にはこれを使ったほうがいいような気はします
@@ -30,11 +38,6 @@ import すると `tilted_drink` フォルダに諸々が追加されます
   - 各々でMaterialを作って上の Shader を適用する形になりそうです
 - `tilted_drink.prefab`: サンプルです
 
-単純に行けば `tilted_drink` prefab を出して器にいれて、適当に色を弄れば動きます
-
-- 器に完全に注ぎきった状態における上面を円柱の上面に合わせてください
-  - 飲料の量は Material の `Level` で調整してください
-- UpperRadius/LowerRadius で円錐台形になら変形できます
 
 ### 注意
 
