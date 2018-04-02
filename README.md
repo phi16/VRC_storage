@@ -8,6 +8,8 @@
 
 ## tilted\_drink
 
+[tilted\_drink.unitypackage](https://github.com/phi16/VRC_storage/raw/master/tilted_drink.unitypackage)
+
 傾くと水面を保つ円錐台
 
 UpperRadius と LowerRadius が指定できるので円錐台形なら作れます
