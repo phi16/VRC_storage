@@ -27,7 +27,7 @@ body {
 }
     </style>
     <script type="text/javascript">
-window.addEventListener("load", function(){
+window.onload = function(){
 
 const container = document.getElementById("container");
 function recv(c) {
@@ -55,10 +55,11 @@ setInterval(function(){
   recv(str);
 },1000);
 
-});
+};
     </script>
   </head>
   <body>
+  po
     <div id="container">
     </div>
   </body>
