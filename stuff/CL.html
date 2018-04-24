@@ -31,11 +31,11 @@ window.onload = function(){
 
 const container = document.getElementById("container");
 function recv(c) {
-  let dom = document.createElement("div");
+  var dom = document.createElement("div");
   dom.textContent = c;
   dom.className = "comment";
-  let delay = Math.random();
-  let duration = Math.random() + Math.min(10, Math.max(6, 15 - c.length / 4));
+  var delay = Math.random();
+  var duration = Math.random() + Math.min(10, Math.max(6, 15 - c.length / 4));
   dom.style["animation-delay"] = delay + "s";
   dom.style["animation-duration"] = duration + "s";
   dom.style["top"] = Math.random() * 85 + "vh";
@@ -46,8 +46,8 @@ function recv(c) {
 }
 
 setInterval(function(){
-  let len = 2 + Math.random() * 30;
-  let str = Math.random().toString(36).substring(2).slice(-len);
+  var len = 2 + Math.random() * 30;
+  var str = Math.random().toString(36).substring(2).slice(-len);
   str += Math.random().toString(36).substring(2).slice(-(len-str.length));
   str += Math.random().toString(36).substring(2).slice(-(len-str.length));
   str += Math.random().toString(36).substring(2).slice(-(len-str.length));
