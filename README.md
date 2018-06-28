@@ -59,6 +59,7 @@ Desktopで撮影のみのために使うことを目的としていますが、�
 - [雨下カイトさん](https://twitter.com/AmashitaKite)
     - 作れるか聞かれたので作りました
     - ちょっと前のバージョンですが[動画](https://www.youtube.com/watch?v=qJ8BG3TwD5w)も出してくれました
+    - もういっこ[動画](https://www.youtube.com/watch?v=_lnaa49uq68)あった
 - [坪倉輝明さん](https://twitter.com/kohack_v)
     - カメラの仕組みについて意見交換等しました
     - こちらもこちらで作っていらっしゃる
