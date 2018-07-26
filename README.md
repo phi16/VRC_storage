@@ -8,9 +8,61 @@
 
 意見などは [Twitter](https://twitter.com/phi16_) にお願いします
 
+- [ownerChecker](#ownerchecker)
+- [hand\_pointer](#hand_pointer)
+- [SphereCam](#spherecam)
+- [tilted\_drink](#tilted_drink)
+
+snakeとpascalとcamlが混ざってるのは半分わざと
+
+## ownerChecker
+
+[ownerChecker.unitypackage](https://github.com/phi16/VRC_storage/raw/master/ownerChecker.unitypackage)
+
+「自分だけに見えるもの」を作るための道具
+
+ほぼ自分用
+
+### 使い方
+
+- Avatarの好きなところに適当にownerChecker.prefabを仕込む (一番外側でよし)
+- 他人に見えないようにしたいものにはシェーダでオブジェクトを消す
+  - 他人であるとき、`tex2Dlod(_Owner,float4(0.5,0.5,0,0)).a < 0.5` になる
+- カメラに関する警告を無視してアップロード (ローカルカメラにする)
+
+### 原理
+
+- ローカルカメラなので他人からはRenderTextureが更新されないだけ
+- カメラの負荷は最小限にしているつもり (何も映っていない、1x1テクスチャにただ定数を書き込むだけ)
+
+## hand\_pointer
+
+![Screenshot](stuff/pointer.png)
+
+[hand\_pointer](https://github.com/phi16/VRC_storage/raw/master/hand_pointer.unitypackage)
+
+腕から伸びる長い棒 (1polygon)
+
+VRChatのカーソル位置とぴったり合わせると遠くのものを(設定に依っては)簡単につかめるようになる (フォーカス位置がわかる)
+
+**他人のアバターだとサイズが違うので各々でいい感じの位置と回転を見つけてほしい**
+
+### 使い方
+
+- 予めownerCheckerをいれておく (他人から見えないようにするため)
+- 手のbone (`hand_L`, `hand_R` とか) に `pointer_L.prefab` や `pointer_R.prefab` を入れる
+  - 多分勝手にownerCheckerのテクスチャが割り当てられているはず
+
+### 原理
+
+- 適当に作った三角ポリゴンをとりあえず依代に
+- 長い棒の位置を適当に計算して
+- シェーダで2polygon生成して出力
+- 位置合わせは試行錯誤でやりました (確定的なパラメータがあればください)
+
 ## SphereCam
 
-![ScreenShot at Presentation Room](screen_1920x1080_2018-04-05_21-04-44.775.png)
+![ScreenShot at Presentation Room](stuff/screen_1920x1080_2018-04-05_21-04-44.775.png)
 
 [SphereCam.unitypackage](https://github.com/phi16/VRC_storage/raw/master/SphereCam.unitypackage)
 
@@ -66,8 +118,8 @@ Desktopで撮影のみのために使うことを目的としていますが、�
 
 ## tilted\_drink
 
-![V1](20180402222533_1.jpg)
-![V2](20180421002928_1.jpg)
+![V1](stuff/20180402222533_1.jpg)
+![V2](stuff/20180421002928_1.jpg)
 
 [tilted\_drink.unitypackage](https://github.com/phi16/VRC_storage/raw/master/tilted_drink.unitypackage)
 
