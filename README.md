@@ -8,10 +8,10 @@
 
 意見などは [Twitter](https://twitter.com/phi16_) にお願いします
 
-- [ownerChecker](#ownerchecker)
-- [hand\_pointer](#hand_pointer)
-- [SphereCam](#spherecam)
-- [tilted\_drink](#tilted_drink)
+- ローカルチェック [ownerChecker](#ownerchecker)
+- まともな方の長い棒 [hand\_pointer](#hand_pointer)
+- 全天球カメラ [SphereCam](#spherecam)
+- 傾く水 [tilted\_drink](#tilted_drink)
 
 snakeとpascalとcamlが混ざってるのは半分わざと
 
@@ -39,9 +39,9 @@ snakeとpascalとcamlが混ざってるのは半分わざと
 
 ![Screenshot](stuff/pointer.png)
 
-[hand\_pointer](https://github.com/phi16/VRC_storage/raw/master/hand_pointer.unitypackage)
+[hand\_pointer.unitypackage](https://github.com/phi16/VRC_storage/raw/master/hand_pointer.unitypackage)
 
-腕から伸びる長い棒 (1polygon)
+腕から伸びる長い棒 (1polygon扱い)
 
 VRChatのカーソル位置とぴったり合わせると遠くのものを(設定に依っては)簡単につかめるようになる (フォーカス位置がわかる)
 
