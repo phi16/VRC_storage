@@ -8,12 +8,32 @@
 
 意見などは [Twitter](https://twitter.com/phi16_) にお願いします
 
+- ふわふわパーティクル [FuwaParticle](#fuwaparticle)
 - ローカルチェック [ownerChecker](#ownerchecker)
 - まともな方の長い棒 [hand\_pointer](#hand_pointer)
 - 全天球カメラ [SphereCam](#spherecam)
 - 傾く水 [tilted\_drink](#tilted_drink)
 
 snakeとpascalとcamlが混ざってるのは半分わざと
+
+## FuwaParticle
+
+![Screenshot](stuff/fuwa.png) at butadiene's "Twinkle of star" world
+
+[FuwaParticle.unitypackage]((https://github.com/phi16/VRC_storage/raw/master/FuwaParticle.unitypackage)
+
+エモいやつ
+
+### 使い方
+
+- `FuwaParticle/fuwa\_particle.prefab` を出す
+    - TransformのScaleやRotationは全く影響を与えません
+    - そのうちなおすかも
+- Materialのパラメータをいい感じにいじる
+
+### 原理
+
+- **G P U パ ー テ ィ ク ル**
 
 ## ownerChecker
 
