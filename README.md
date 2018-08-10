@@ -30,6 +30,7 @@ snakeとpascalとcamlが混ざってるのは半分わざと
     - TransformのScaleやRotationは全く影響を与えません
     - そのうちなおすかも
 - Materialのパラメータをいい感じにいじる
+    - もっと弄りたければシェーダを弄ってください
 
 ### 原理
 
