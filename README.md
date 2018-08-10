@@ -26,7 +26,7 @@ snakeとpascalとcamlが混ざってるのは半分わざと
 
 ### 使い方
 
-- `FuwaParticle/fuwa\_particle.prefab` を出す
+- FuwaParticle/fuwa\_particle.prefab を出す
     - TransformのScaleやRotationは全く影響を与えません
     - そのうちなおすかも
 - Materialのパラメータをいい感じにいじる
