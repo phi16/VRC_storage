@@ -28,7 +28,7 @@ snakeとpascalとcamlが混ざってるのは半分わざと
 
 - FuwaParticle/fuwa\_particle.prefab を出す
     - TransformのScaleやRotationは全く影響を与えません
-    - そのうちなおすかも
+    - そのうちなおすかも → なおりました
 - Materialのパラメータをいい感じにいじる
     - もっと弄りたければシェーダを弄ってください
 
