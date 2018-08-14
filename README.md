@@ -1,10 +1,16 @@
-# 配布用諸々
+# 配布用諸々 / Storage for distribution
+
+These packages are licensed under CC0.
+
+[![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png "CC0")](http://creativecommons.org/publicdomain/zero/1.0/)
+
+---
 
 特に確認なども要らないので勝手に使っていただいて結構です
 
 利用は自己責任でお願いします
 
-諸々の著作権などは放棄するので好きにいじってください
+諸々の著作権などは放棄しているので好きにいじってください
 
 意見などは [Twitter](https://twitter.com/phi16_) にお願いします
 
