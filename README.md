@@ -14,6 +14,7 @@ These packages are licensed under CC0.
 
 意見などは [Twitter](https://twitter.com/phi16_) にお願いします
 
+- 破綻の無いTrail [rounded\_trail](#rounded_trail)
 - ふわふわパーティクル [FuwaParticle](#fuwaparticle)
 - ローカルチェック [ownerChecker](#ownerchecker)
 - まともな方の長い棒 [hand\_pointer](#hand_pointer)
@@ -21,6 +22,30 @@ These packages are licensed under CC0.
 - 傾く水 [tilted\_drink](#tilted_drink)
 
 snakeとpascalとcamlが混ざってるのは半分わざと
+
+## rounded\_trail
+
+![Screenshot](stuff/trail.png)
+
+[rounded\_trail.unitypackage](https://github.com/phi16/VRC_storage/raw/master/rounded_trail.unitypackage)
+
+lineJoinとlineCapが常にroundな、破綻の無いTrail用シェーダ
+
+### 使い方
+
+`rounded_trail_sample.prefab` を見てください
+
+- `Trail Renderer` における `Width` は **常に0** にすること
+- 色は `Trail Renderer` ではなくMaterialの `Color` の値を読みます
+  - だからグラデーション機能とかは使えません (怠惰)
+- 未検証ですが [Snail's Marker](https://github.com/theepicsnail/Marker) と互換性がある気がする
+  - `Ink` Material のシェーダをコレに変えればいいはず
+  - もしもその目的で使った人が居たら情報ください (おかしい or うまくうごく)
+
+### 原理
+
+- billboardを自分で作った
+- 端点に円をgeometry shaderで生成
 
 ## FuwaParticle
 
