@@ -31,6 +31,8 @@ snakeとpascalとcamlが混ざってるのは半分わざと
 
 lineJoinとlineCapが常にroundな、破綻の無いTrail用シェーダ
 
+めちゃくちゃ近いと円が見えてしまいますが、まぁ許してほしい (ちゃんと計算すれば治るかもしれない)
+
 ### 使い方
 
 `rounded_trail_sample.prefab` を見てください
