@@ -14,6 +14,7 @@ These packages are licensed under CC0.
 
 意見などは [Twitter](https://twitter.com/phi16_) にお願いします
 
+- 周期的無限空間の基礎 [infinite\_floor](#infinite_floor)
 - 破綻の無いTrail [rounded\_trail](#rounded_trail)
 - ふわふわパーティクル [FuwaParticle](#fuwaparticle)
 - ローカルチェック [ownerChecker](#ownerchecker)
@@ -22,6 +23,41 @@ These packages are licensed under CC0.
 - 傾く水 [tilted\_drink](#tilted_drink)
 
 snakeとpascalとcamlが混ざってるのは半分わざと
+
+## infinite\_floor
+
+![Screenshot](stuff/infs.png)
+
+[infinite\_floor.unitypackage](https://github.com/phi16/VRC_storage/raw/master/infinite_floor.unitypackage)
+
+[Stair Hall](https://twitter.com/phi16_/status/1124367556901392384) の基本機構です。
+
+このまま何かに使うとかではなく仕組み把握用のpackageなので気になる人が居たらというやつです。
+
+一応このテスト空間自体もアップロードしてあるので[ここ](https://www.vrchat.net/home/world/wrld_58171b45-7161-47b7-9834-fbb2462855b2)から自由に見てみてください。
+
+### 使い方
+
+- VRCSDK と StandardAssets/Utility を入れた状態でimportしてください
+- scene.unity を開くと機構が置いてあるシーンが出てくるはずです
+
+### メモ
+
+- 実際に使われているものとは異なる部分が多々あります
+  - 今はPlayerLocalレイヤーで判定で取っていますがToybox/PlayerTrackingで取ったほうがいいという話もあります
+  - うまく行かなくて困ったりしたら自由にいじるとよいとおもいます　
+
+### わかりにくそうなところ
+
+- コライダーの移動挙動について
+  - まず中心を動かす
+  - 外側を消すことで、プレイヤーが中心のコライダーに必ず乗ることを保証させる (そのためにすこし時間を置く)
+  - 外側を移動する
+    - もしもプレイヤーが外側のコライダーに乗っていると引きずられるので
+- リスポーン時の挙動
+  - まずSpawnBaseがあるので落ちない
+  - RespawnColliderが反応、AnimationTrigger
+  - そこからuGUI経由で2つのSceneResetPositionを叩く
 
 ## rounded\_trail
 
