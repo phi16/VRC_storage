@@ -68,8 +68,7 @@ struct Point {
     int type;
     // -1: no collision
     // 0: outer
-    // 1: short
-    // 2: tall
+    // 1..: objects
 };
 float4 offsetFromUV(float2 uv) {
     // X index, Y index, Scale, OffsetY
@@ -321,12 +320,7 @@ Point singleRayCast(Scene s, float3 p, float3 d) {
 }
 Point rayCast(Scene s, float3 p, float3 d, out float4 firstCollision) {
     // Available Light Transport:
-    // diffuse - diffuse
-    // diffuse - mirror - diffuse
-    // diffuse - glass - diffuse
-    // diffuse - mirror - glass - diffuse
-    // diffuse - glass - mirror - diffuse
-    // diffuse - glass - mirror - glass - diffuse
+    // diffuse - (glass - mirror) * 4 - diffuse
     Point u = singleRayCast(s, p, d);
     firstCollision = u.type == -1 ? 0 : float4(u.worldPos, 1);
     float baseEta = 1.5;
