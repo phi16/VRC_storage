@@ -27,7 +27,11 @@ snakeとpascalとcamlが混ざってるのは半分わざと
 
 ## mikoko\_IK
 
+![Screenshot](stuff/mk.png)
+
 [これ](https://twitter.com/phi16_/status/1193910380793233409)
+
+[mikoko\_ik.unitypackage](https://github.com/phi16/VRC_storage/raw/master/mikoko_ik.unitypackage)
 
 - 原理
   - 頭はCanvasTracking、手の位置はPickupのGripで正確に取れる
