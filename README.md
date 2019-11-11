@@ -14,6 +14,7 @@ These packages are licensed under CC0.
 
 意見などは [Twitter](https://twitter.com/phi16_) にお願いします
 
+- みここIK [mikoko\_IK](#mikoko_IK)
 - 周期的無限空間の基礎 [infinite\_floor](#infinite_floor)
 - 破綻の無いTrail [rounded\_trail](#rounded_trail)
 - ふわふわパーティクル [FuwaParticle](#fuwaparticle)
@@ -23,6 +24,33 @@ These packages are licensed under CC0.
 - 傾く水 [tilted\_drink](#tilted_drink)
 
 snakeとpascalとcamlが混ざってるのは半分わざと
+
+## mikoko\_IK
+
+[これ](https://twitter.com/phi16_/status/1193910380793233409)
+
+- 原理
+  - 頭はCanvasTracking、手の位置はPickupのGripで正確に取れる
+  - つまり3点トラッキングの情報は取れる
+  - それに従ってIKを動かしてあげると動く
+- 導入手順
+  - VRCSDK (いつものとこ)
+  - Standard Assets (Asset Store)
+  - [Toybox V2](https://www.dropbox.com/s/k0hui254bx4ozzv/VRCPrefabToyboxV2.1.unitypackage?dl=0)
+  - Final IK (Asset Store)
+  - [Mikoko](https://nekomasu.wixsite.com/kemomimioukoku/mikoko)
+  - ([Merlin-san/EasyEventEditor](https://github.com/Merlin-san/EasyEventEditor))
+    - 機構をいじることがなければOK
+  - このpackageを展開
+  - `Assets/ik_transfer/sample.unity` に動くシーンがあるはず
+  - 自前で拾う場合
+    - `Assets/ik_transfer/ik_transfer.prefab` を置く
+    - ToyboxのPlayerTrackingを置く
+    - `Original/Head` のScene Reset Positionの `Position` をPlayerTrackingの `Update` に指定
+- 動作
+  - `MirrorFrom` を基準とした領域にプレイヤーが動くと、 `MirrorTarget` を基準とした座標系でアバターが動く
+  - `Program` を非Activeにすると同期が止まる
+  - これは全部ローカルだけど頑張れば他人との同期はできるはずです
 
 ## infinite\_floor
 
