@@ -14,6 +14,7 @@ These packages are licensed under CC0.
 
 意見などは [Twitter](https://twitter.com/phi16_) にお願いします
 
+- 曲線上を走るAnimationClipを生成するやつ [CurveAnimGenerator](#CurveAnimGenerator)
 - みここIK [mikoko\_IK](#mikoko_IK)
 - 周期的無限空間の基礎 [infinite\_floor](#infinite_floor)
 - 破綻の無いTrail [rounded\_trail](#rounded_trail)
@@ -24,6 +25,14 @@ These packages are licensed under CC0.
 - 傾く水 [tilted\_drink](#tilted_drink)
 
 snakeとpascalとcamlが混ざってるのは半分わざと
+
+## CurveAnimGenerator
+
+![Screenshot](stuff/curve.png)
+
+森とかStairHallの動画作成に使ったEditor拡張
+
+直下にあるGameObject群を順番に通るAnimationClipを生成します
 
 ## mikoko\_IK
 
