@@ -30,6 +30,8 @@ snakeとpascalとcamlが混ざってるのは半分わざと
 
 ![Screenshot](stuff/curve.png)
 
+[CurveAnimGenerator.unitypackage](https://github.com/phi16/VRC_storage/raw/master/CurveAnimGenerator.unitypackage)
+
 森とかStairHallの動画作成に使ったEditor拡張
 
 直下にあるGameObject群を順番に通るAnimationClipを生成します
