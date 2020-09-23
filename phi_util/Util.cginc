@@ -9,7 +9,7 @@ float2x2 ei(float a) {
 }
 
 float mod(float x, float m) {
-	return x - floor(x/m)*m;
+    return x - floor(x/m)*m;
 }
 
 float2 s1(float a) {
@@ -30,9 +30,9 @@ float ts1(float x, float y, float m) {
 }
 
 float3 pack(float3 xyz, uint ix) {
-	uint3 xyzI = asuint(xyz);
-	xyzI = (xyzI >> (ix * 8)) % 256;
-	return (float3(xyzI) + 0.5) / 255.0;
+    uint3 xyzI = asuint(xyz);
+    xyzI = (xyzI >> (ix * 8)) % 256;
+    return (float3(xyzI) + 0.5) / 255.0;
 }
 
 /* Useful Snippets
@@ -52,15 +52,15 @@ float3 forward = normalize(mul(transpose((float3x3)UNITY_MATRIX_V), float3(0,0,-
 float3 refl = DecodeHDR(UNITY_SAMPLE_TEXCUBE(unity_SpecCube0, reflDir), unity_SpecCube0_HDR);
 
 float3 unpack(int2 iuv) {
-	float2 uv = (iuv + 0.5) / float2(IW/4, IH);
-	float texWidth = IW;
-	float3 e = float3(1.0 / texWidth / 2, 3.0 / texWidth / 2, 0);
-	uint3 v0 = uint3(tex2Dlod(_Input, float4(uv - e.yz, 0, 0)).xyz * 255.) << 0;
-	uint3 v1 = uint3(tex2Dlod(_Input, float4(uv - e.xz, 0, 0)).xyz * 255.) << 8;
-	uint3 v2 = uint3(tex2Dlod(_Input, float4(uv + e.xz, 0, 0)).xyz * 255.) << 16;
-	uint3 v3 = uint3(tex2Dlod(_Input, float4(uv + e.yz, 0, 0)).xyz * 255.) << 24;
-	uint3 v = v0 + v1 + v2 + v3;
-	return asfloat(v);
+    float2 uv = (iuv + 0.5) / float2(IW/4, IH);
+    float texWidth = IW;
+    float3 e = float3(1.0 / texWidth / 2, 3.0 / texWidth / 2, 0);
+    uint3 v0 = uint3(tex2Dlod(_Input, float4(uv - e.yz, 0, 0)).xyz * 255.) << 0;
+    uint3 v1 = uint3(tex2Dlod(_Input, float4(uv - e.xz, 0, 0)).xyz * 255.) << 8;
+    uint3 v2 = uint3(tex2Dlod(_Input, float4(uv + e.xz, 0, 0)).xyz * 255.) << 16;
+    uint3 v3 = uint3(tex2Dlod(_Input, float4(uv + e.yz, 0, 0)).xyz * 255.) << 24;
+    uint3 v = v0 + v1 + v2 + v3;
+    return asfloat(v);
 }
 
 */
@@ -68,13 +68,13 @@ float3 unpack(int2 iuv) {
 // Quaternion
 
 float4 mulQ(float4 a, float4 b) {
-	return float4(a.w*b.xyz + b.w*a.xyz + cross(a.xyz,b.xyz), a.w*b.w - dot(a.xyz,b.xyz));
+    return float4(a.w*b.xyz + b.w*a.xyz + cross(a.xyz,b.xyz), a.w*b.w - dot(a.xyz,b.xyz));
 }
 float4 conjQ(float4 q) {
-	return float4(-q.xyz,q.w);
+    return float4(-q.xyz,q.w);
 }
 float4 invQ(float4 q) {
-	return conjQ(q) / dot(q,q);
+    return conjQ(q) / dot(q,q);
 }
 float4 axisQ(float3 rv) {
     float angle = length(rv);
@@ -83,17 +83,17 @@ float4 axisQ(float3 rv) {
 }
 // https://gamedev.stackexchange.com/questions/28395/rotating-vector3-by-a-quaternion
 float3 appQ(float4 q, float3 v) {
-	// q v q*
-	float3 u = q.xyz;
-	float s = q.w;
-	return 2 * dot(u,v) * u
-		+ (s*s - dot(u,u)) * v
-		+ 2 * s * cross(u,v);
+    // q v q*
+    float3 u = q.xyz;
+    float s = q.w;
+    return 2 * dot(u,v) * u
+        + (s*s - dot(u,u)) * v
+        + 2 * s * cross(u,v);
 }
 
 // Distance Field
 
 float sdBox(float2 p, float2 s) {
-	float2 d = abs(p) - s;
-	return length(max(d,0)) + min(max(d.x,d.y),0);
+    float2 d = abs(p) - s;
+    return length(max(d,0)) + min(max(d.x,d.y),0);
 }
