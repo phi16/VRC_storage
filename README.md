@@ -27,6 +27,10 @@ These packages are licensed under CC0.
 
 ## FlyingSystem
 
+![Screenshot](stuff/fly.png)
+
+[FlyingSystem.unitypackage](https://github.com/phi16/VRC_storage/raw/master/FlyingSystem.unitypackage)
+
 [Cocoon-05](https://vrchat.com/home/world/wrld_c3319ee2-02f1-4e0a-b0dc-8e11a297eb65)とかで使われているやつです。
 
 VRCSDK3とUdonSharpを入れておけば動くと思います。
