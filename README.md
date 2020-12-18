@@ -14,6 +14,7 @@ These packages are licensed under CC0.
 
 意見などは [Twitter](https://twitter.com/phi16_) にお願いします
 
+- Flying System [FlyingSystem](#FlyingSystem)
 - 曲線上を走るAnimationClipを生成するやつ [CurveAnimGenerator](#CurveAnimGenerator)
 - みここIK [mikoko\_IK](#mikoko_IK)
 - 周期的無限空間の基礎 [infinite\_floor](#infinite_floor)
@@ -24,7 +25,11 @@ These packages are licensed under CC0.
 - 全天球カメラ [SphereCam](#spherecam)
 - 傾く水 [tilted\_drink](#tilted_drink)
 
-snakeとpascalとcamlが混ざってるのは半分わざと
+## FlyingSystem
+
+[Cocoon-05](https://vrchat.com/home/world/wrld_c3319ee2-02f1-4e0a-b0dc-8e11a297eb65)とかで使われているやつです。
+
+VRCSDK3とUdonSharpを入れておけば動くと思います。
 
 ## CurveAnimGenerator
 
