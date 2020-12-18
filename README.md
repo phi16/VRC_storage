@@ -31,7 +31,7 @@ These packages are licensed under CC0.
 
 [FlyingSystem.unitypackage](https://github.com/phi16/VRC_storage/raw/master/FlyingSystem.unitypackage)
 
-[Cocoon-05](https://vrchat.com/home/world/wrld_c3319ee2-02f1-4e0a-b0dc-8e11a297eb65)とかで使われているやつです。
+[inorganic space](https://vrchat.com/home/world/wrld_b69e3e93-6b1a-45f4-ab49-ce241e1767a1)とか[Cocoon-05](https://vrchat.com/home/world/wrld_c3319ee2-02f1-4e0a-b0dc-8e11a297eb65)とかで使われているやつです。
 
 VRCSDK3とUdonSharpを入れておけば動くと思います。
 
