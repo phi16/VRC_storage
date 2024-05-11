@@ -32,6 +32,8 @@ These packages are licensed under CC0.
 
 [TimelineWand_240511.unitypackage](https://github.com/phi16/VRC_storage/raw/master/TimelineWand_240511.unitypackage)
 
+[Twitter に投げた動画](https://twitter.com/phi16_/status/1789189512440193400)
+
 タイムラインを好きにいじれるやつです。あと同期もできます。説明は中に入ってます。
 
 使用例のあるワールドはそのうち出ます。多分。
