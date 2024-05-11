@@ -14,6 +14,7 @@ These packages are licensed under CC0.
 
 意見などは [Twitter](https://twitter.com/phi16_) にお願いします
 
+- Timelineコントローラ [TimelineWand](#TimelineWand)
 - Flying System [FlyingSystem](#FlyingSystem)
 - 曲線上を走るAnimationClipを生成するやつ [CurveAnimGenerator](#CurveAnimGenerator)
 - みここIK [mikoko\_IK](#mikoko_IK)
@@ -24,6 +25,16 @@ These packages are licensed under CC0.
 - まともな方の長い棒 [hand\_pointer](#hand_pointer)
 - 全天球カメラ [SphereCam](#spherecam)
 - 傾く水 [tilted\_drink](#tilted_drink)
+
+## TimelineWand
+
+![Screenshot](stuff/tlwand.png)
+
+[TimelineWand_240511.unitypackage](https://github.com/phi16/VRC_storage/raw/master/TimelineWand_240511.unitypackage)
+
+タイムラインを好きにいじれるやつです。説明は中に入ってます。
+
+使用例のあるワールドはそのうち出ます。多分。
 
 ## FlyingSystem
 
