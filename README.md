@@ -36,7 +36,7 @@ These packages are licensed under CC0.
 
 タイムラインを好きにいじれるやつです。あと同期もできます。説明は中に入ってます。
 
-使用例のあるワールドはそのうち出ます。多分。
+デモワールドとして[Pipeline: Commentary](https://x.com/phi16_/status/1802362527353090255)に「私が居る」ので触ってみてください。
 
 ## FlyingSystem
 
