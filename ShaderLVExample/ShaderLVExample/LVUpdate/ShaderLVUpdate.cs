@@ -104,7 +104,7 @@ public class ShaderLVUpdate : UdonSharpBehaviour
         }
         crt.Update(1);
 
-        UpdateProps(); // Call this if you update the volume transform
+        // UpdateProps(); // Call this if you update the volume transform
     }
 
 #if !COMPILER_UDONSHARP && UNITY_EDITOR
