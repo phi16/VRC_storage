@@ -72,7 +72,7 @@ public class ShaderLVUpdate : UdonSharpBehaviour
         VRCShader.SetGlobalMatrixArray(lightVolumeInvWorldMatrixID, invWorldMatrix);
 
         Vector4[] boundsUvw = new Vector4[6];
-        float smin = 1.0f / RES;
+        float smin = 0.5f / RES;
         float smax = 1.0f - smin;
         boundsUvw[0] = new Vector4((smin + 0) / 3, smin, smin, 0);
         boundsUvw[1] = new Vector4((smax + 0) / 3, smax, smax, 0);
