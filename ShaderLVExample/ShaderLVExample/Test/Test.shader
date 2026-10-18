@@ -16,7 +16,7 @@ Shader "ShaderLVExample/Test"
             #pragma multi_compile_fog
 
             #include "UnityCG.cginc"
-            #include "Assets/VRC Light Volumes/Shaders/LightVolumes.cginc"
+            #include "Packages/red.sim.lightvolumes/Shaders/LightVolumes.cginc"
 
             struct appdata
             {

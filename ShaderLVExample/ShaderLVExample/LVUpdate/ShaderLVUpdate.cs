@@ -31,6 +31,8 @@ public class ShaderLVUpdate : UdonSharpBehaviour
     private int lightVolumeProbesBlendID;
     private int lightVolumeSharpBoundsID;
     private int lightVolumeID;
+    private int lightVolumeVersionID;
+    private int lightVolumeUvwScaleID;
 
     private bool initialized = false;
 
@@ -48,6 +50,8 @@ public class ShaderLVUpdate : UdonSharpBehaviour
         lightVolumeProbesBlendID = VRCShader.PropertyToID("_UdonLightVolumeProbesBlend");
         lightVolumeSharpBoundsID = VRCShader.PropertyToID("_UdonLightVolumeSharpBounds");
         lightVolumeID = VRCShader.PropertyToID("_UdonLightVolume");
+        lightVolumeVersionID = VRCShader.PropertyToID("_UdonLightVolumeVersion");
+        lightVolumeUvwScaleID = VRCShader.PropertyToID("_UdonLightVolumeUvwScale");
 
         // Init with capacity
         VRCShader.SetGlobalVectorArray(lightVolumeInvLocalEdgeSmoothID, new Vector4[32]);
@@ -55,6 +59,7 @@ public class ShaderLVUpdate : UdonSharpBehaviour
         VRCShader.SetGlobalVectorArray(lightVolumeRotationID, new Vector4[64]);
         VRCShader.SetGlobalVectorArray(lightVolumeUvwID, new Vector4[192]);
         VRCShader.SetGlobalVectorArray(lightVolumeColorID, new Vector4[32]);
+        VRCShader.SetGlobalVectorArray(lightVolumeUvwScaleID, new Vector4[96]);
     }
 
     void UpdateProps()
@@ -72,7 +77,7 @@ public class ShaderLVUpdate : UdonSharpBehaviour
         VRCShader.SetGlobalMatrixArray(lightVolumeInvWorldMatrixID, invWorldMatrix);
 
         Vector4[] boundsUvw = new Vector4[6];
-        float smin = 0.5f / RES;
+        float smin = 1.0f / RES;
         float smax = 1.0f - smin;
         boundsUvw[0] = new Vector4((smin + 0) / 3, smin, smin, 0);
         boundsUvw[1] = new Vector4((smax + 0) / 3, smax, smax, 0);
@@ -81,6 +86,13 @@ public class ShaderLVUpdate : UdonSharpBehaviour
         boundsUvw[4] = new Vector4((smin + 2) / 3, smin, smin, 0);
         boundsUvw[5] = new Vector4((smax + 2) / 3, smax, smax, 0);
         VRCShader.SetGlobalVectorArray(lightVolumeUvwID, boundsUvw);
+
+        Vector4[] uvwScale = new Vector4[3];
+        float size = smax - smin;
+        uvwScale[0] = new Vector4((smin + 0) / 3, smin, smin, size / 3);
+        uvwScale[1] = new Vector4((smin + 1) / 3, smin, smin, size);
+        uvwScale[2] = new Vector4((smin + 2) / 3, smin, smin, size);
+        VRCShader.SetGlobalVectorArray(lightVolumeUvwScaleID, uvwScale);
 
         VRCShader.SetGlobalFloat(lightVolumeCountID, 1);
         VRCShader.SetGlobalFloat(lightVolumeAdditiveCountID, 0);
@@ -92,6 +104,8 @@ public class ShaderLVUpdate : UdonSharpBehaviour
         VRCShader.SetGlobalVectorArray(lightVolumeColorID, color);
 
         VRCShader.SetGlobalTexture(lightVolumeID, crt);
+
+        VRCShader.SetGlobalFloat(lightVolumeVersionID, 2);
     }
 
     void Update()
@@ -104,7 +118,7 @@ public class ShaderLVUpdate : UdonSharpBehaviour
         }
         crt.Update(1);
 
-        // UpdateProps(); // Call this if you update the volume transform
+        UpdateProps(); // Call this if you update the volume transform
     }
 
 #if !COMPILER_UDONSHARP && UNITY_EDITOR
